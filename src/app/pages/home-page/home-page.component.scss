@@ -1,0 +1,49 @@
+@import '/src/assets/variables/breakpoints.scss';
+
+.container {
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - (2*100px));
+}
+.list {
+    width: 50%;
+    height: 100%;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media (max-width: $desktop) {
+        width: 60%;
+    }
+}
+
+.item {
+    width: 180px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.6);
+    transition: .2s linear;
+
+    &:hover {
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: $mobile) {
+        width: 140px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+    }
+}
+
+a {
+    color: darkblue;
+}

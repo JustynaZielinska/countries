@@ -1,0 +1,76 @@
+@import '/src/assets/variables/breakpoints.scss';
+
+.container {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.modal {
+    position: absolute;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+
+    @media (max-width: $mobile) {
+        width: 80%;
+    }
+}
+
+h4 {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+button {
+    position: absolute;
+    top: 4%;
+    right: 2.5%;
+    font-size: 22px;
+    color: gray;
+    background-color: transparent;
+    transition: .2s linear;
+    z-index: 3;
+
+    &:hover {
+        transform: scale(.8);
+        }
+
+    @media (max-width: $mobile) {
+        top: 2.5%;
+        right: 4%;
+    }
+}
+
+.contact{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 60px 200px;
+    grid-template-rows: 50px 50px 50px 50px;
+    margin: 20px auto 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: $mobile) {
+        width: 80%;
+        padding: 0;
+    }
+
+    &__item{
+        font-size: 14px;
+        line-height: 30px;
+        color: darkgray
+    }
+
+    &__icon{
+        width: 30px;
+        height: 30px;
+    }
+}

@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>
+        <img [src]="countryData?.flag">
+        <span>{{ countryData?.name }}</span>
+    </h2>
+    <table>
+        <th>
+            <span>Capital: </span>
+            <span>{{ countryData?.capital }}</span>
+        </th>
+        <th>
+            <span>Currency: </span>
+            <span>{{ countryData?.currencies[0].name }}</span>
+        </th>
+        <th>
+            <span>Population: </span>
+            <span>{{ countryData?.population }}</span>
+        </th>
+        <th>
+            <span>Area: </span>
+            <span>{{ countryData?.area }}</span>
+        </th>
+    </table>
+</div>

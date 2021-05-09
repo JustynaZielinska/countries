@@ -1,0 +1,28 @@
+<nav class="navbar">
+    <ul class="list">
+        <li
+            class="item"
+            [class.isHidden] = "!isButtonVisible"
+        >
+            <button (click)="back()">
+                <fa-icon [icon]="faArrowLeft"></fa-icon>
+                Back
+            </button>
+        </li>
+        <li class="item">
+            <div class="item__logo">
+                <a routerLink="/countries">
+                    <img src="assets/images/logo.svg">
+                </a>
+            </div>
+        </li>
+        <li class="item">
+            <button (click)="isModalActive = !isModalActive">About</button>
+        </li>
+    </ul>
+</nav>
+<app-modal
+    *ngIf="isModalActive"
+    (isModalActive) = "hideModal($event)"
+>
+</app-modal>

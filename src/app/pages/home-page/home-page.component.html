@@ -1,0 +1,11 @@
+<div class="container">
+    <ul class="list">
+        <li class="item" *ngFor="let continent of continents">
+            <a [routerLink]="[continent]">
+                <div>
+                    {{ continent }}
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
