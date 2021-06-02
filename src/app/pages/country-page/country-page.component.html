@@ -1,24 +1,20 @@
-<div class="container">
+<div class="container" *ngIf="(countryData$ | async) as countryData">
     <h2>
-        <img [src]="countryData?.flag">
-        <span>{{ countryData?.name }}</span>
+        <img [src]="countryData[0].flag">
+        <span>{{ countryData[0].name }}</span>
     </h2>
     <table>
         <th>
             <span>Capital: </span>
-            <span>{{ countryData?.capital }}</span>
-        </th>
-        <th>
-            <span>Currency: </span>
-            <span>{{ countryData?.currencies[0].name }}</span>
+            <span>{{ countryData[0].capital }}</span>
         </th>
         <th>
             <span>Population: </span>
-            <span>{{ countryData?.population }}</span>
+            <span>{{ countryData[0].population }}</span>
         </th>
         <th>
             <span>Area: </span>
-            <span>{{ countryData?.area }}</span>
+            <span>{{ countryData[0].area }}</span>
         </th>
     </table>
 </div>

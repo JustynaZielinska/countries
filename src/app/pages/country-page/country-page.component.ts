@@ -1,36 +1,22 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { ApiService } from 'src/app/core/services/api-service/api.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ICountry } from 'src/app/core/interfaces/country.interface';
 
 @Component({
   selector: 'app-country-page',
   templateUrl: './country-page.component.html',
   styleUrls: ['./country-page.component.scss']
 })
-export class CountryPageComponent implements OnInit, OnDestroy {
+export class CountryPageComponent implements OnInit {
   country: string;
-  countryData: any;
-  apiSubscription: Subscription;
+  countryData$: Observable<ICountry>;
 
-  constructor(private route: ActivatedRoute, private router: Router, private api: ApiService) {
-    this.country = this.route.snapshot.paramMap.get('country');
-    this.apiSubscription = this.api.searchCountry(this.country)
-      .subscribe(
-        (response) => {
-          console.log(response);
-          this.countryData = response[0];
-        },
-        () => {
-        this.router.navigate(['page-not-found']);
-        }
-      );
-    }
+  constructor(private route: ActivatedRoute) {
+  
+    this.countryData$ = this.route.snapshot.data.countryData;
+}
 
   ngOnInit(): void {
-  }
-
-  ngOnDestroy(): void {
-    this.apiSubscription.unsubscribe();
   }
 }
