@@ -6,9 +6,9 @@
     height: calc(100vh - (2*100px));
 }
 .list {
-    width: 50%;
-    height: 100%;
-    margin: 50px auto;
+    width: 40%;
+    height: 50%;
+    margin: 100px auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -16,6 +16,7 @@
 
     @media (max-width: $desktop) {
         width: 60%;
+        height: 80%;
     }
 }
 

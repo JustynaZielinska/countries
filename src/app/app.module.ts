@@ -22,7 +22,7 @@ import { ModalComponent } from './components/modal/modal.component';
     FooterComponent,
     RegionPageComponent,
     CountryPageComponent,
-    ModalComponent
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

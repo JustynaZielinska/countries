@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ICountry } from 'src/app/core/interfaces/country.interface';
@@ -8,15 +8,13 @@ import { ICountry } from 'src/app/core/interfaces/country.interface';
   templateUrl: './country-page.component.html',
   styleUrls: ['./country-page.component.scss']
 })
-export class CountryPageComponent implements OnInit {
+export class CountryPageComponent {
   country: string;
   countryData$: Observable<ICountry>;
 
   constructor(private route: ActivatedRoute) {
   
-    this.countryData$ = this.route.snapshot.data.countryData;
-}
-
-  ngOnInit(): void {
+    this.countryData$ = this.route.snapshot.data.countryData.getCountryData;
   }
+
 }

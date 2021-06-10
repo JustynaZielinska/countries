@@ -1,27 +1,44 @@
-# Countries
+![Logo aplikacji](./src/assets/images/countries.jpg)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Development server](#development-server)
+* [Running unit test](#running-unit-test)
+* [Contact](#contact)
+
+## General info
+The main goal of this application was to learn rest API and further explore the possibilities offered by Angular (including resolver).
+
+:point_right:[LIVE](https://justynazielinska.github.io/countries)
+
+## Technologies
+* Angular ~10.1.3
+* RxJS ~6.6.0
+* Typescript ~4.0.2
+* Karma ~5.0.0
+
+## Setup
+To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer.
+
+```
+# Clone this repository
+$ git clone https://github.com/JustynaZielinska/countries
+
+# Go into the repository
+$ cd lab-app
+
+# Install dependencies
+$ npm install
+```
 
 ## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Running unit test
+Run `ng test` to execute the unit tests via Karma.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Contact
+Created by [Justyna Zielińska](https://www.linkedin.com/in/j-zielinska/)
+juzielska@gmail.com - feel free to contact me!

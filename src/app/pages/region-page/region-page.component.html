@@ -3,8 +3,8 @@
         <h1>{{ region }}</h1>
         <li class="item" *ngFor="let country of countries">
             <a [routerLink]='[country.name]'>
-                <img [src]="country?.flag">
-                <span>{{ country?.name }}</span>
+                <img [src]="country.flag">
+                <span>{{ country.name }}</span>
             </a>
         </li>
     </ul>
