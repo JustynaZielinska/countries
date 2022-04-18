@@ -12,13 +12,13 @@ export class ApiService {
 
   public searchCountries(region: string): Observable<object> {​
     return this.httpClient.get(
-      `https://restcountries.eu/rest/v2/region/${region}`
+      `https://restcountries.com/rest/v3.1/region/${region}`
     );
   }
 
   public searchCountry(country: string): Observable<ICountry> {​
     return this.httpClient.get<ICountry>(
-      `https://restcountries.eu/rest/v2/name/${country}?fields=name;flag;capital;population;area`
+      `https://restcountries.com/rest/v3.1/name/${country}?fields=name;flag;capital;population;area`
     );
   }
 }
