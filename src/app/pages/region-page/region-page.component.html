@@ -2,9 +2,9 @@
     <ul class="list">
         <h1>{{ region }}</h1>
         <li class="item" *ngFor="let country of countries">
-            <a [routerLink]='[country.name]'>
-                <img [src]="country.flag">
-                <span>{{ country.name }}</span>
+            <a [routerLink]='[country.name.common]'>
+                <img [src]="country.flags.svg">
+                <span>{{ country.name.common }}</span>
             </a>
         </li>
     </ul>

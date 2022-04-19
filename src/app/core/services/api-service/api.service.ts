@@ -18,7 +18,7 @@ export class ApiService {
 
   public searchCountry(country: string): Observable<ICountry> {​
     return this.httpClient.get<ICountry>(
-      `https://restcountries.com/v3.1/name/${country}?fields=name;flag;capital;population;area`
+      `https://restcountries.com/v3.1/name/${country}?fields=name,flag,capital,population,area`
     );
   }
 }

@@ -1,7 +1,7 @@
 <div class="container" *ngIf="(countryData$ | async) as countryData">
     <h2>
-        <img [src]="countryData[0].flag">
-        <span>{{ countryData[0].name }}</span>
+        {{countryData[0].flag}}
+        <span>{{ countryData[0].name.common }}</span>
     </h2>
     <table>
         <th>
